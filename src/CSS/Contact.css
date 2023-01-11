@@ -1,0 +1,230 @@
+.contact .info {
+    padding: 30px;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
+}
+
+.contact .info i {
+    font-size: 20px;
+    color: #149ddd;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #dff3fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
+    background: #149ddd;
+    color: #fff;
+}
+
+.contact .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #050d18;
+}
+
+@media (min-width: 1200px) {
+    .h4, h4 {
+        font-size: 1.5rem;
+    }
+}
+
+.contact .info p {
+    padding: 0 0 10px 60px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #173b6c;
+}
+
+.contact .php-email-form {
+    width: 100%;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 0 24px 0 rgb(0 0 0 / 12%);
+}
+
+.contact .php-email-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact .php-email-form .form-group {
+    padding-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+.contact .php-email-form label {
+    padding-bottom: 8px;
+}
+
+label {
+    display: inline-block;
+}
+
+.contact .php-email-form input {
+    height: 44px;
+}
+
+.contact .php-email-form input, .contact .php-email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.align-items-stretch {
+    align-items: stretch !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+@media (min-width: 992px) {
+    .col-lg-5 {
+        flex: 0 0 auto;
+        width: 41.66666667%;
+    }
+}
+
+@media (max-width: 992px) {
+    .mt-lg-0 {
+        margin-top: 3rem !important;
+    }
+}
+
+.mt-5 {
+    margin-top: 0;
+}
+
+.align-items-stretch {
+    align-items: stretch !important;
+}
+
+
+@media (min-width: 992px) {
+    .col-lg-7 {
+        flex: 0 0 auto;
+        width: 58.33333333%;
+    }
+}
+
+@media (max-width: 768px) {
+    .row {
+        display: block;
+    }
+}
+
+.row > * {
+    flex-shrink: 0;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+}
+
+.my-3 {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+}
+
+.contact .php-email-form .loading {
+    display: none;
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+.contact .php-email-form .error-message {
+    display: none;
+    color: #fff;
+    background: #ed3c0d;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.contact .php-email-form .sent-message {
+    display: none;
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.contact .php-email-form button[type=submit] {
+    background: #149ddd;
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+
+[type=button], [type=reset], [type=submit], button {
+    -webkit-appearance: button;
+}
+
+button, select {
+    text-transform: none;
+}
+
+@media (min-width: 360px) {
+    .row {
+        flex-wrap: wrap;
+    }
+}

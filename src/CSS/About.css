@@ -1,0 +1,210 @@
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+#about {
+    /*background: url(../img/test-bg.png);*/
+    background-position: center;
+    background-size: auto;
+}
+
+@media (min-width: 992px) {
+    .container, .container-lg, .container-md, .container-sm {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container, .container-md, .container-sm {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .container, .container-sm {
+        max-width: 540px;
+    }
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.section-title {
+    padding-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    color: #173b6c;
+}
+
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #149ddd;
+    bottom: 0;
+    left: 0;
+}
+
+.section-title p {
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+[data-aos^=fade][data-aos^=fade].aos-animate {
+    opacity: 1;
+    transform: translateZ(0);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+[data-aos][data-aos][data-aos-easing=ease-in-out], body[data-aos-easing=ease-in-out] [data-aos] {
+    transition-timing-function: ease-in-out;
+}
+
+[data-aos][data-aos][data-aos-duration="1000"], body[data-aos-duration="1000"] [data-aos] {
+    transition-duration: 1s;
+}
+
+[data-aos^=fade][data-aos^=fade] {
+    /*opacity: 0;*/
+    transition-property: opacity, transform;
+}
+
+@media (min-width: 992px) {
+    .col-lg-4 {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+}
+
+>
+.row > {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+}
+
+[data-aos=fade-right] {
+    transform: translate3d(-100px, 0, 0);
+}
+
+@media (min-width: 992px) {
+    .pt-lg-0 {
+        padding-top: 0 !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-8 {
+        flex: 0 0 auto;
+        width: 66.66666667%;
+    }
+}
+
+.about .content h3 {
+    font-weight: 700;
+    font-size: 26px;
+    color: #173b6c;
+}
+
+.fst-italic {
+    font-style: italic !important;
+}
+
+@media (min-width: 992px) {
+    .col-lg-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
+@media (min-width: 360px) {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.about .content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about .content ul li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.about .content ul i {
+    font-size: 16px;
+    margin-right: 5px;
+    color: #149ddd;
+    line-height: 0;
+}
+
+.about .content ul strong {
+    margin-right: 10px;
+}
+
+.bi-chevron-right::before {
+    content: "\f285";
+}
+
+.bi::before, [class^="bi-"]::before, [class*=" bi-"]::before {
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -0.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+img, svg {
+    vertical-align: middle;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
