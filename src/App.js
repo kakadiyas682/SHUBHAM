@@ -12,11 +12,12 @@ import "./CSS/Contact.css";
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
+import "./CSS/Skills.css"
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 // import img from "./img/IMG_0082.jpg"
 // import ReactDOM from 'react-dom/client';
 
 const Menu = props => {
-    console.log("props", props)
     return (
         <div className={`menu-container ${props.showMenu}`}>
             <div className="menu-items">
@@ -198,21 +199,26 @@ const About = props => {
                         <div className="row">
                             <div className="col-lg-6">
                                 <ul>
-                                    <li><i className="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>27 05 2003</span>
+                                    <li><i><ChevronRightIcon style={{fontSize: '35px'}}/></i>
+                                        <strong>Birthday:</strong> <span>27 05 2003</span>
                                     </li>
-                                    <li><i className="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 9725340590</span>
+                                    <li><i><ChevronRightIcon style={{fontSize: '35px'}}/></i> <strong>Phone:</strong>
+                                        <span>+91 9725340590</span>
                                     </li>
-                                    <li><i className="bi bi-chevron-right"></i> <strong>City:</strong> <span>Gujarat, INDIA</span>
+                                    <li><i><ChevronRightIcon style={{fontSize: '35px'}}/></i> <strong>City:</strong>
+                                        <span>Gujarat, INDIA</span>
                                     </li>
                                 </ul>
                             </div>
                             <div className="col-lg-6">
                                 <ul>
-                                    <li><i className="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>B.COM ( RUNNING )</span>
+                                    <li><i><ChevronRightIcon style={{fontSize: '35px'}}/></i> <strong>Degree:</strong>
+                                        <span>B.COM ( RUNNING )</span>
                                     </li>
-                                    <li><i className="bi bi-chevron-right"></i>
+                                    <li><i><ChevronRightIcon style={{fontSize: '35px'}}/></i>
                                         <strong>Email:</strong><span>kakadiyas682@gmail.com</span></li>
-                                    <li><i className="bi bi-chevron-right"></i> <strong>Freelance:</strong>
+                                    <li><i><ChevronRightIcon style={{fontSize: '35px'}}/></i>
+                                        <strong>Freelance:</strong>
                                         <span>Available</span></li>
                                 </ul>
                             </div>
@@ -223,6 +229,65 @@ const About = props => {
             </div>
         </section>
     );
+};
+
+const Skills = props => {
+    return (
+        <section id="skills" className="skills section-bg">
+            <div className="container">
+                <div className="section-title">
+                    <h2>Skills</h2>
+                </div>
+                <div className="row skills-content">
+                    <div className="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+                        <div className="progress">
+                            <span className="skill">HTML <i className="val">100%</i></span>
+                            <div className="progress-bar-wrap">
+                                <div style={{width: '100%'}} aria-valuemax="100" className="progress-bar"
+                                     role="progressbar" aria-valuenow="100" aria-valuemin="0"></div>
+                            </div>
+                        </div>
+                        <div className="progress">
+                            <span className="skill">CSS <i className="val">90%</i></span>
+                            <div className="progress-bar-wrap">
+                                <div className="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                     aria-valuemax="100" style={{width: '90%'}}>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="progress">
+                            <span className="skill">JavaScript <i className="val">80%</i></span>
+                            <div className="progress-bar-wrap">
+                                <div className="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                                     aria-valuemax="100" style={{width: '80%'}}>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                        <div className="progress">
+                            <span className="skill">REACT JS <i className="val">70%</i></span>
+                            <div className="progress-bar-wrap">
+                                <div className="progress-bar" role="progressbar" aria-valuenow="60"
+                                     aria-valuemin="0"
+                                     aria-valuemax="100" style={{width: '70%'}}>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="progress">
+                            <span className="skill">NODE JS <i className="val">60%</i></span>
+                            <div className="progress-bar-wrap">
+                                <div className="progress-bar" role="progressbar" aria-valuenow="60"
+                                     aria-valuemin="0"
+                                     aria-valuemax="100" style={{width: '60%'}}>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
 };
 
 const Contact = props => {
@@ -352,6 +417,7 @@ class App extends React.Component {
                 <Nav toggleMenu={this.toggleMenu} showMenu={this.state.menuState}/>
                 <Header/>
                 <About/>
+                <Skills/>
                 <Contact/>
                 {/*<Projects/>*/}
                 {/*<Footer/>*/}
