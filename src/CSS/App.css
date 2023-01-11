@@ -69,7 +69,7 @@ a:active {
 }
 
 .img {
-    /*background-image: url("../img/IMG_0082.jpg");*/
+    background-image: url("../img/IMG_0082.jpg");
     color: white;
     width: 60%;
     height: 50%;
@@ -240,8 +240,8 @@ a:active {
  *****************/
 
 #welcome-section {
-    /*background-image: url("../img/IMG_0077.jpg");*/
-    background-color: black;
+    background-image: url("../img/IMG_0077.jpg");
+    /*background-color: black;*/
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;

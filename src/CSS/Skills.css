@@ -18,7 +18,12 @@
         width: 50%;
     }
 }
-
+@media (min-width: 768px) {
+    .col-lg-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
 .skills .progress {
     height: 60px;
     display: block;
@@ -72,5 +77,14 @@
 .skills .progress .skill .val {
     float: right;
     font-style: normal;
+}
+
+.row > {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
 }
 

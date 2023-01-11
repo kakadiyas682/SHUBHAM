@@ -14,7 +14,7 @@ import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import "./CSS/Skills.css"
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-// import img from "./img/IMG_0082.jpg"
+import img from "./img/IMG_0082.jpg"
 // import ReactDOM from 'react-dom/client';
 
 const Menu = props => {
@@ -188,7 +188,7 @@ const About = props => {
                 </div>
                 <div className="row">
                     <div className="col-lg-4 aos-init aos-animate" data-aos="fade-right">
-                        <img src={"img"} className="img-fluid" alt=""/>
+                        <img src={img} className="img-fluid" alt=""/>
                     </div>
                     <div className="col-lg-8 pt-4 pt-lg-0 content aos-init aos-animate" data-aos="fade-left">
                         <h3>Web Designer &amp; WordPress Developer.</h3>
@@ -297,7 +297,7 @@ const Contact = props => {
                 <div className="section-title">
                     <h2>Contact Us</h2>
                 </div>
-                <div className="row aos-init aos-animate" data-aos="fade-in">
+                <div className="row aos-init aos-animate data" data-aos="fade-in">
                     <div className="col-lg-5 d-flex align-items-stretch">
                         <div className="info">
                             <div className="address">
