@@ -89,7 +89,10 @@ const Nav = props => {
         </React.Fragment>
     );
 };
+<<<<<<< HEAD
 
+=======
+>>>>>>> 41f6479dda49dd9e7fe7121c4af2186905d57fd1
 
 var ReactRotatingText = require('react-rotating-text');
 
@@ -103,7 +106,11 @@ const Header = props => {
                 <div className="middle">
                     <div className="text-type-animation">Kakadiya Shubham</div>
                     <span className="text-type-animation"><strong>I'm  </strong>
+<<<<<<< HEAD
                         <ReactRotatingText items={['Designer', 'Developer', 'Freelancer']} />
+=======
+                        <ReactRotatingText className="txt-rotate" items={['Designer', 'Developer', 'Freelancer']} />
+>>>>>>> 41f6479dda49dd9e7fe7121c4af2186905d57fd1
                     </span>
                 </div>
             </div>
@@ -260,7 +267,11 @@ const Contact = props => {
                         </div>
                     </div>
                     <div className="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+<<<<<<< HEAD
                         <form action="https://formspree.io/f/mknagraz" method="post" role="form"
+=======
+                        <form method="post" role="form"
+>>>>>>> 41f6479dda49dd9e7fe7121c4af2186905d57fd1
                             className="php-email-form">
                             <div className="row">
                                 <div className="form-group col-md-6">
