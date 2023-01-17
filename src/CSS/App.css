@@ -278,6 +278,7 @@ a:active {
 
 
 div.middle {
+    background-position: center;
     color: #ebebeb;
     top: 0;
     right: 0;
