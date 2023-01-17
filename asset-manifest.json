@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/SHUBHAM/static/css/main.b6c1ce73.css",
+    "main.js": "/SHUBHAM/static/js/main.df041094.js",
+    "static/js/787.4ff0e016.chunk.js": "/SHUBHAM/static/js/787.4ff0e016.chunk.js",
+    "static/media/IMG_0082.jpg": "/SHUBHAM/static/media/IMG_0082.3436c52c770bea9c43af.jpg",
+    "static/media/IMG_0077.jpg": "/SHUBHAM/static/media/IMG_0077.7657d8c1a9fc995b0b18.jpg",
+    "index.html": "/SHUBHAM/index.html",
+    "main.b6c1ce73.css.map": "/SHUBHAM/static/css/main.b6c1ce73.css.map",
+    "main.df041094.js.map": "/SHUBHAM/static/js/main.df041094.js.map",
+    "787.4ff0e016.chunk.js.map": "/SHUBHAM/static/js/787.4ff0e016.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b6c1ce73.css",
+    "static/js/main.df041094.js"
+  ]
+}
