@@ -17,27 +17,28 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import img from "./img/IMG_0082.jpg"
 // import ReactDOM from 'react-dom/client';
 
+
 const Menu = props => {
     return (
         <div className={`menu-container ${props.showMenu}`}>
             <div className="menu-items">
-                <div className="img"/>
+                <div className="img" />
                 <div className="Name">Shubham</div>
                 <div className="ico">
                     <div className="icon"><Link target="_blank"
-                                                href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"><TwitterIcon
-                        sx={{fontSize: 17}}/></Link></div>
+                        href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"><TwitterIcon
+                            sx={{ fontSize: 17 }} /></Link></div>
                     <div className="icon"><Link target="_blank"
-                                                href="https://www.facebook.com/shubham.kakadiya.182"><FacebookRoundedIcon
-                        sx={{fontSize: 17}}/></Link></div>
+                        href="https://www.facebook.com/shubham.kakadiya.182"><FacebookRoundedIcon
+                            sx={{ fontSize: 17 }} /></Link></div>
                     <div className="icon"><Link target="_blank" href="https://www.instagram.com/shubham.kakadiya.9725/"><InstagramIcon
-                        sx={{fontSize: 17}}/></Link></div>
+                        sx={{ fontSize: 17 }} /></Link></div>
                     <div className="icon"><Link target="_blank"
-                                                href="https://clientlogin.cdn.skype.com/cdn/6.0.1/release/index.html"><CloudQueueIcon
-                        sx={{fontSize: 17}}/></Link></div>
+                        href="https://clientlogin.cdn.skype.com/cdn/6.0.1/release/index.html"><CloudQueueIcon
+                            sx={{ fontSize: 17 }} /></Link></div>
                     <div className="icon"><Link target="_blank"
-                                                href="https://www.linkedin.com/in/kakadiya-shubham-b42661235/"><LinkedInIcon
-                        sx={{fontSize: 17}}/></Link></div>
+                        href="https://www.linkedin.com/in/kakadiya-shubham-b42661235/"><LinkedInIcon
+                            sx={{ fontSize: 17 }} /></Link></div>
                 </div>
                 <ul>
                     <li>
@@ -61,13 +62,11 @@ const Menu = props => {
                         </a>
                     </li>
                 </ul>
-                <SocialLinks/>
+                <SocialLinks />
             </div>
         </div>
     );
 };
-
-
 /***********************
  Nav Component
  ***********************/
@@ -82,7 +81,7 @@ const Nav = props => {
                             onClick={props.toggleMenu}
                             className={props.showMenu === 'active' ? 'menu-button active' : 'menu-button'}
                         >
-                            <span/>
+                            <span />
                         </a>
                     </div>
                 </div>
@@ -90,78 +89,21 @@ const Nav = props => {
         </React.Fragment>
     );
 };
-var TxtRotate = function (el, toRotate, period) {
-    this.toRotate = toRotate;
-    this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(period, 100) || 4000;
-    this.txt = '';
-    this.tick();
-    this.isDeleting = false;
-};
 
-TxtRotate.prototype.tick = function () {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
 
-    if (this.isDeleting) {
-        this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-        this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
-
-    this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
-
-    var that = this;
-    var delta = 150 - Math.random() * 100;
-
-    if (this.isDeleting) {
-        delta /= 2;
-    }
-
-    if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 1000;
-    }
-
-    setTimeout(function () {
-        that.tick();
-    }, delta);
-};
-
-window.onload = function () {
-    var elements = document.getElementsByClassName('txt-rotate');
-    for (var i = 0; i < elements.length; i++) {
-        var toRotate = elements[i].getAttribute('data-rotate');
-        var period = elements[i].getAttribute('data-period');
-        if (toRotate) {
-            new TxtRotate(elements[i], JSON.parse(toRotate), period);
-        }
-    }
-    // INJECT CSS
-    var css = document.createElement("style");
-    css.type = "text/css";
-    css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #F26921 }";
-    document.body.appendChild(css);
-};
-
+var ReactRotatingText = require('react-rotating-text');
 
 const Header = props => {
     return (
         <header id="welcome-section">
-            <div className="forest"/>
-            <div className="silhouette"/>
-            <div className="moon"/>
+            <div className="forest" />
+            <div className="silhouette" />
+            <div className="moon" />
             <div className="container">
                 <div className="middle">
                     <div className="text-type-animation">Kakadiya Shubham</div>
                     <span className="text-type-animation"><strong>I'm  </strong>
-                       <span className="txt-rotate" data-period="2000"
-                             data-rotate='[ "Designer", "Developer", "Freelancer"]'></span>
+                        <ReactRotatingText items={['Designer', 'Developer', 'Freelancer']} />
                     </span>
                 </div>
             </div>
@@ -184,7 +126,7 @@ const About = props => {
                 </div>
                 <div className="row">
                     <div className="col-lg-4 aos-init aos-animate" data-aos="fade-right">
-                        <img src={img} className="img-fluid" alt=""/>
+                        <img src={img} className="img-fluid" alt="" />
                     </div>
                     <div className="col-lg-8 pt-4 pt-lg-0 content aos-init aos-animate" data-aos="fade-left">
                         <h3>Web Designer &amp; WordPress Developer.</h3>
@@ -195,25 +137,25 @@ const About = props => {
                         <div className="row">
                             <div className="col-lg-6">
                                 <ul>
-                                    <li><i><ChevronRightIcon style={{fontSize: '35px'}}/></i>
+                                    <li><i><ChevronRightIcon style={{ fontSize: '35px' }} /></i>
                                         <strong>Birthday:</strong> <span>27 05 2003</span>
                                     </li>
-                                    <li><i><ChevronRightIcon style={{fontSize: '35px'}}/></i> <strong>Phone:</strong>
+                                    <li><i><ChevronRightIcon style={{ fontSize: '35px' }} /></i> <strong>Phone:</strong>
                                         <span>+91 9725340590</span>
                                     </li>
-                                    <li><i><ChevronRightIcon style={{fontSize: '35px'}}/></i> <strong>City:</strong>
+                                    <li><i><ChevronRightIcon style={{ fontSize: '35px' }} /></i> <strong>City:</strong>
                                         <span>Gujarat, INDIA</span>
                                     </li>
                                 </ul>
                             </div>
                             <div className="col-lg-6">
                                 <ul>
-                                    <li><i><ChevronRightIcon style={{fontSize: '35px'}}/></i> <strong>Degree:</strong>
+                                    <li><i><ChevronRightIcon style={{ fontSize: '35px' }} /></i> <strong>Degree:</strong>
                                         <span>B.COM ( RUNNING )</span>
                                     </li>
-                                    <li><i><ChevronRightIcon style={{fontSize: '35px'}}/></i>
+                                    <li><i><ChevronRightIcon style={{ fontSize: '35px' }} /></i>
                                         <strong>Email:</strong><span>kakadiyas682@gmail.com</span></li>
-                                    <li><i><ChevronRightIcon style={{fontSize: '35px'}}/></i>
+                                    <li><i><ChevronRightIcon style={{ fontSize: '35px' }} /></i>
                                         <strong>Freelance:</strong>
                                         <span>Available</span></li>
                                 </ul>
@@ -239,15 +181,15 @@ const Skills = props => {
                         <div className="progress">
                             <span className="skill">HTML <i className="val">100%</i></span>
                             <div className="progress-bar-wrap">
-                                <div style={{width: '100%'}} aria-valuemax="100" className="progress-bar"
-                                     role="progressbar" aria-valuenow="100" aria-valuemin="0"></div>
+                                <div style={{ width: '100%' }} aria-valuemax="100" className="progress-bar"
+                                    role="progressbar" aria-valuenow="100" aria-valuemin="0"></div>
                             </div>
                         </div>
                         <div className="progress">
                             <span className="skill">CSS <i className="val">90%</i></span>
                             <div className="progress-bar-wrap">
                                 <div className="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
-                                     aria-valuemax="100" style={{width: '90%'}}>
+                                    aria-valuemax="100" style={{ width: '90%' }}>
                                 </div>
                             </div>
                         </div>
@@ -255,7 +197,7 @@ const Skills = props => {
                             <span className="skill">JavaScript <i className="val">80%</i></span>
                             <div className="progress-bar-wrap">
                                 <div className="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
-                                     aria-valuemax="100" style={{width: '80%'}}>
+                                    aria-valuemax="100" style={{ width: '80%' }}>
                                 </div>
                             </div>
                         </div>
@@ -265,8 +207,8 @@ const Skills = props => {
                             <span className="skill">REACT JS <i className="val">70%</i></span>
                             <div className="progress-bar-wrap">
                                 <div className="progress-bar" role="progressbar" aria-valuenow="60"
-                                     aria-valuemin="0"
-                                     aria-valuemax="100" style={{width: '70%'}}>
+                                    aria-valuemin="0"
+                                    aria-valuemax="100" style={{ width: '70%' }}>
                                 </div>
                             </div>
                         </div>
@@ -274,8 +216,8 @@ const Skills = props => {
                             <span className="skill">NODE JS <i className="val">60%</i></span>
                             <div className="progress-bar-wrap">
                                 <div className="progress-bar" role="progressbar" aria-valuenow="60"
-                                     aria-valuemin="0"
-                                     aria-valuemax="100" style={{width: '60%'}}>
+                                    aria-valuemin="0"
+                                    aria-valuemax="100" style={{ width: '60%' }}>
                                 </div>
                             </div>
                         </div>
@@ -297,42 +239,42 @@ const Contact = props => {
                     <div className="col-lg-5 d-flex align-items-stretch">
                         <div className="info">
                             <div className="address">
-                                <i><LocationOnOutlinedIcon/></i>
+                                <i><LocationOnOutlinedIcon /></i>
                                 <h4>Location:</h4>
                                 <p>Rachana Society, Surat, Gujarat</p>
                             </div>
                             <div className="email">
-                                <i><EmailOutlinedIcon/></i>
+                                <i><EmailOutlinedIcon /></i>
                                 <h4>Email:</h4>
                                 <p>kakadiyas682@gmail.com</p>
                             </div>
                             <div className="phone">
-                                <i><SmartphoneIcon/></i>
+                                <i><SmartphoneIcon /></i>
                                 <h4>Call:</h4>
                                 <p>+91 9725340590</p>
                             </div>
                             <iframe width="100%" height="290" frameBorder="0" scrolling="no" marginHeight="0"
-                                    marginWidth="0"
-                                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Rachana%20Society,%20Surat,%20Gujarat+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                                marginWidth="0"
+                                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Rachana%20Society,%20Surat,%20Gujarat+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
                                 <a href="https://www.maps.ie/distance-area-calculator.html">area maps</a></iframe>
                         </div>
                     </div>
                     <div className="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                        <form method="post" role="form"
-                              className="php-email-form">
+                        <form action="https://formspree.io/f/mknagraz" method="post" role="form"
+                            className="php-email-form">
                             <div className="row">
                                 <div className="form-group col-md-6">
                                     <label htmlFor="name">Your Name <span>*</span></label>
-                                    <input type="text" name="name" className="form-control" id="name" required=""/>
+                                    <input type="text" name="name" className="form-control" id="name" required="" />
                                 </div>
                                 <div className="form-group col-md-6">
                                     <label htmlFor="name">Your Email <span>*</span></label>
-                                    <input type="email" className="form-control" name="email" id="email" required=""/>
+                                    <input type="email" className="form-control" name="email" id="email" required="" />
                                 </div>
                             </div>
                             <div className="form-group">
                                 <label htmlFor="name">Subject <span>*</span></label>
-                                <input type="text" className="form-control" name="subject" id="subject" required=""/>
+                                <input type="text" className="form-control" name="subject" id="subject" required="" />
                             </div>
                             <div className="form-group">
                                 <label htmlFor="name">Message <span>*</span></label>
@@ -365,7 +307,7 @@ const SocialLinks = props => {
                 title="Link to author's Twitter profile"
             >
                 {' '}
-                <i className="fab fa-twitter"/>
+                <i className="fab fa-twitter" />
             </a>
             <a
                 id="profile-link"
@@ -375,7 +317,7 @@ const SocialLinks = props => {
                 title="Link to author's GitHub Profile"
             >
                 {' '}
-                <i className="fab fa-github"/>
+                <i className="fab fa-github" />
             </a>
             <a
                 href="https://codepen.io/yagoestevez"
@@ -384,7 +326,7 @@ const SocialLinks = props => {
                 title="Link to author's Codepen Profile"
             >
                 {' '}
-                <i className="fab fa-codepen"/>
+                <i className="fab fa-codepen" />
             </a>
         </div>
     );
@@ -409,12 +351,12 @@ class App extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <Menu toggleMenu={this.toggleMenu} showMenu={this.state.menuState}/>
-                <Nav toggleMenu={this.toggleMenu} showMenu={this.state.menuState}/>
-                <Header/>
-                <About/>
-                <Skills/>
-                <Contact/>
+                <Menu toggleMenu={this.toggleMenu} showMenu={this.state.menuState} />
+                <Nav toggleMenu={this.toggleMenu} showMenu={this.state.menuState} />
+                <Header />
+                <About />
+                <Skills />
+                <Contact />
                 {/*<Projects/>*/}
                 {/*<Footer/>*/}
             </React.Fragment>
