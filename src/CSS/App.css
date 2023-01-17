@@ -37,7 +37,7 @@ a:active {
 /***** Menu Layer *****/
 .menu-container {
     position: absolute;
-    height: 125%;
+    height: 100%;
     width: 100vw;
     background: #202934;
     /*border: 60px solid #181d23;*/
@@ -243,9 +243,10 @@ a:active {
     background-image: url("../img/IMG_0077.jpg");
     /*background-color: black;*/
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     position: relative;
-    min-height: 125vh;
+    min-height: 100vh;
     margin: 0 auto;
     z-index: 1;
 }
