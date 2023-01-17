@@ -4,7 +4,6 @@ section {
 }
 
 #about {
-    /*background: url(../img/test-bg.png);*/
     background-position: center;
     background-size: auto;
 }
@@ -79,8 +78,6 @@ p {
 [data-aos^=fade][data-aos^=fade].aos-animate {
     opacity: 1;
     transform: translateZ(0);
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 [data-aos][data-aos][data-aos-easing=ease-in-out], body[data-aos-easing=ease-in-out] [data-aos] {

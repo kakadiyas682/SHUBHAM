@@ -16,7 +16,6 @@ html, body {
 body {
     color: #252934;
     background: #fafafa;
-    /*font-size: 62.5%;*/
     font-family: 'Overlock', Arial, Helvetica, sans-serif;
     overflow-x: hidden;
 }
@@ -40,7 +39,6 @@ a:active {
     height: 100%;
     width: 100vw;
     background: #202934;
-    /*border: 60px solid #181d23;*/
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -157,10 +155,8 @@ a:active {
 #navbar .nav-wrapper {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    padding: 0 2rem;
+    justify-content: end;
+    padding: 2rem;
 }
 
 #navbar .brand {
@@ -189,9 +185,7 @@ a:active {
 }
 
 .menu {
-    /*position: fixed;*/
-    /*right: 15px;*/
-    /*top: 15px;*/
+    position: fixed;
     z-index: 9998;
     border: 0;
     font-size: 24px;
@@ -241,7 +235,6 @@ a:active {
 
 #welcome-section {
     background-image: url("../img/IMG_0077.jpg");
-    /*background-color: black;*/
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -265,7 +258,6 @@ a:active {
     /*background: #fafafa;*/
     clip-path: polygon(0 0, 20% 5%, 100% 0, 100% 100%, 80% 95%, 0 100%);
     z-index: 5;
-    /*background: #fafafa url(https://raw.githubusercontent.com/yagoestevez/fcc-portfolio/master/src/Images/Author_BG.jpg) center right no-repeat;*/
     background-attachment: fixed;
 }
 

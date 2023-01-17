@@ -228,8 +228,3 @@ button, select {
         flex-wrap: wrap;
     }
 }
-@media (min-width: 360px) {
-    .data {
-        width: 100%;
-    }
-}

@@ -77,10 +77,6 @@ const Nav = props => {
         <React.Fragment>
             <nav id="navbar">
                 <div className="nav-wrapper">
-                    <p className="brand">
-                        Kakadiya
-                        <strong>Shubham</strong>
-                    </p>
                     <div className="menu">
                         <a
                             onClick={props.toggleMenu}
