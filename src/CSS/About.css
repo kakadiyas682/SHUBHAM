@@ -7,6 +7,8 @@ section {
     background: url(../img/test-bg.png);
     background-position: center;
     background-size: auto;
+    /*animation-name: backInLeft;*/
+
 }
 
 @media (min-width: 992px) {
@@ -118,7 +120,7 @@ body[data-aos-duration="1000"] [data-aos] {
     }
 }
 
->.row> {
+> .row > {
     flex-shrink: 0;
     width: 100%;
     max-width: 100%;
@@ -235,4 +237,64 @@ h6 {
     margin-bottom: 0.5rem;
     font-weight: 500;
     line-height: 1.2;
+}
+
+@keyframes fade-left {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(10);
+        opacity: 1;
+    }
+}
+
+.active.fade-left {
+    animation: fade-left 1s ease-in;
+}
+
+@keyframes fade-lefts {
+    0% {
+        transform: translateX(-90%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(10);
+        opacity: 1;
+    }
+}
+
+.active.fade-lefts {
+    animation: fade-lefts 1s ease-in;
+}
+
+@keyframes fade-right {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(10);
+        opacity: 1;
+    }
+}
+
+.active.fade-right {
+    animation: fade-right 1s ease-in;
+}
+
+@keyframes fade-bottom {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.active.fade-bottom {
+    animation: fade-bottom 1s ease-in;
 }

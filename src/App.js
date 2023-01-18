@@ -16,6 +16,7 @@ import "./CSS/Skills.css"
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import img from "./img/IMG_0082.jpg"
 import "./CSS/Resume.css"
+import 'animate.css';
 
 
 const Menu = props => {
@@ -111,10 +112,27 @@ const Header = props => {
     );
 };
 
+function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+
+    for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+        } else {
+            reveals[i].classList.remove("active");
+        }
+    }
+}
+
+window.addEventListener("scroll", reveal);
 
 const About = props => {
     return (
-        <section id="about" className="about">
+        <section id="about" className="about ">
             <div className="container">
                 <div className="section-title">
                     <h2>About</h2>
@@ -124,11 +142,12 @@ const About = props => {
                         to the task.
                     </p>
                 </div>
-                <div className="row">
-                    <div className="col-lg-4 aos-init aos-animate" data-aos="fade-right">
+                <div className="row ">
+                    <div className="col-lg-4 aos-init aos-animate reveal fade-left" data-aos="fade-right">
                         <img src={img} className="img-fluid" alt=""/>
                     </div>
-                    <div className="col-lg-8 pt-4 pt-lg-0 content aos-init aos-animate" data-aos="fade-left">
+                    <div className="col-lg-8 pt-4 pt-lg-0 content aos-init aos-animate reveal fade-right"
+                         data-aos="fade-left">
                         <h3>Web Designer &amp; WordPress Developer.</h3>
                         <p className="fst-italic">
                             I work with commercial projects of any scale and with private requests. I use the latest
@@ -171,24 +190,25 @@ const About = props => {
 
 const Skills = props => {
     return (
-        <section id="skills" className="skills section-bg">
+        <section id="skills" className="skills section-bg ">
             <div className="container">
                 <div className="section-title">
                     <h2>Skills</h2>
                 </div>
-                <div className="row skills-content">
-                    <div className="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+                <div className="row skills-content reveal fade-bottom ">
+                    <div className="col-lg-6 aos-init aos-animate " data-aos="fade-up">
                         <div className="progress">
                             <span className="skill">HTML <i className="val">100%</i></span>
                             <div className="progress-bar-wrap">
-                                <div style={{width: '100%'}} aria-valuemax="100" className="progress-bar"
+                                <div style={{width: '100%'}} aria-valuemax="100"
+                                     className="progress-bar reveal  fade-lefts"
                                      role="progressbar" aria-valuenow="100" aria-valuemin="0"></div>
                             </div>
                         </div>
                         <div className="progress">
                             <span className="skill">CSS <i className="val">90%</i></span>
                             <div className="progress-bar-wrap">
-                                <div className="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0"
+                                <div className="progress-bar reveal  fade-lefts" role="progressbar" aria-valuenow="90" aria-valuemin="0"
                                      aria-valuemax="100" style={{width: '90%'}}>
                                 </div>
                             </div>
@@ -196,17 +216,17 @@ const Skills = props => {
                         <div className="progress">
                             <span className="skill">JavaScript <i className="val">80%</i></span>
                             <div className="progress-bar-wrap">
-                                <div className="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                                <div className="progress-bar reveal  fade-lefts" role="progressbar" aria-valuenow="70" aria-valuemin="0"
                                      aria-valuemax="100" style={{width: '80%'}}>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                    <div className="col-lg-6 aos-init aos-animate " data-aos="fade-up" data-aos-delay="100">
                         <div className="progress">
                             <span className="skill">REACT JS <i className="val">70%</i></span>
                             <div className="progress-bar-wrap">
-                                <div className="progress-bar" role="progressbar" aria-valuenow="60"
+                                <div className="progress-bar reveal  fade-lefts" role="progressbar" aria-valuenow="60"
                                      aria-valuemin="0"
                                      aria-valuemax="100" style={{width: '70%'}}>
                                 </div>
@@ -215,7 +235,7 @@ const Skills = props => {
                         <div className="progress">
                             <span className="skill">NODE JS <i className="val">60%</i></span>
                             <div className="progress-bar-wrap">
-                                <div className="progress-bar" role="progressbar" aria-valuenow="60"
+                                <div className="progress-bar reveal  fade-lefts" role="progressbar" aria-valuenow="60"
                                      aria-valuemin="0"
                                      aria-valuemax="100" style={{width: '60%'}}>
                                 </div>
@@ -242,7 +262,7 @@ const Resume = props => {
                         campaigns.</p>
                 </div>
 
-                <div className="row">
+                <div className="row reveal fade-bottom">
                     <div className="col-lg-6 aos-init aos-animate" data-aos="fade-up">
                         <h3 className="resume-title">Sumary</h3>
                         <div className="resume-item pb-0">
@@ -324,7 +344,7 @@ const Contact = props => {
                 <div className="section-title">
                     <h2>Contact Us</h2>
                 </div>
-                <div className="row aos-init aos-animate data" data-aos="fade-in">
+                <div className="row aos-init aos-animate data reveal zoomIn" data-aos="fade-in">
                     <div className="col-lg-5 d-flex align-items-stretch">
                         <div className="info">
                             <div className="address">
