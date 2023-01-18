@@ -36,7 +36,7 @@ a:active {
 /***** Menu Layer *****/
 .menu-container {
     position: absolute;
-    height: 100%;
+    height: 100vh;
     width: 100vw;
     background: #202934;
     display: flex;
@@ -212,16 +212,16 @@ a:active {
     top: 8px;
 }
 
-.menu-button.active>span {
+.menu-button.active > span {
     background: transparent;
 }
 
-.menu-button.active>span::before {
+.menu-button.active > span::before {
     transform: rotate(-225deg);
     top: 0px;
 }
 
-.menu-button.active>span::after {
+.menu-button.active > span::after {
     transform: rotate(225deg);
     top: 0px;
 }
@@ -239,7 +239,7 @@ a:active {
     background-position: center;
     background-size: cover;
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
     margin: 0 auto;
     z-index: 1;
 }
