@@ -15,7 +15,7 @@ import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import "./CSS/Skills.css"
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import img from "./img/IMG_0082.jpg"
-// import ReactDOM from 'react-dom/client';
+import "./CSS/Resume.css"
 
 
 const Menu = props => {
@@ -52,8 +52,8 @@ const Menu = props => {
                         </a>
                     </li>
                     <li>
-                        <a href="#projects" onClick={props.toggleMenu}>
-                            PORTFOLIO
+                        <a href="#resume" onClick={props.toggleMenu}>
+                            RESUME
                         </a>
                     </li>
                     <li>
@@ -103,7 +103,7 @@ const Header = props => {
                 <div className="middle">
                     <div className="text-type-animation">Kakadiya Shubham</div>
                     <span className="text-type-animation"><strong>I'm  </strong>
-                        <ReactRotatingText className="txt-rotate" items={['Designer', 'Developer', 'Freelancer']}/>
+                        <ReactRotatingText style={{color: '#ff0'}} items={['Designer', 'Developer', 'Freelancer']}/>
                     </span>
                 </div>
             </div>
@@ -222,6 +222,95 @@ const Skills = props => {
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+    )
+};
+
+const Resume = props => {
+    return (
+        <section id="resume" className="resume">
+            <div className="container">
+                <div className="section-title">
+                    <h2>Resume</h2>
+                    <p>Extremely motivated to web
+                        develop my skills and grow
+                        professionally. i am confident in my
+                        ability to come up with interesting
+                        ideas for unforgettable marketing
+                        campaigns.</p>
+                </div>
+
+                <div className="row">
+                    <div className="col-lg-6 aos-init aos-animate" data-aos="fade-up">
+                        <h3 className="resume-title">Sumary</h3>
+                        <div className="resume-item pb-0">
+                            <h4>Kakadiya Shubham</h4>
+                            <p><em>My name is Kakadiya Shubham and I am a skilled Web designer and web developer and i
+                                presenting unique projects.</em></p>
+                            <ul>
+                                <li>Gujarat - INDIA</li>
+                                <li>+91 9725340590</li>
+                                <li>kakadiyas682@gmail.com</li>
+                            </ul>
+                        </div>
+
+                        <h3 className="resume-title">Education</h3>
+
+                        <div className="resume-item">
+                            <h4>Bachelor of Commerce ( B.Com )</h4>
+                            <h5>2021 - 2024</h5>
+                            <p><em>Shree J.D. Gabani Commerce College</em></p>
+                            <p>
+                            </p>
+                            <li><strong>Running</strong></li>
+                            <p></p>
+                        </div>
+                        <div className="resume-item">
+                            <h4>Higher School Certificate ( HSC )</h4>
+                            <h5>2019 - 2020</h5>
+                            <p><em>Ashadeep Vidhyalay - 6 </em></p>
+                            <p>
+                            </p>
+                            <li><strong>Completed</strong></li>
+                            <p></p>
+                        </div>
+                        <div className="resume-item">
+                            <h4>Secondary School Certificate (SSC)</h4>
+                            <h5>2018 - 2019</h5>
+                            <p><em>R.B Dhami Vidhyalay</em></p>
+                            <p>
+                            </p>
+                            <li><strong>Completed</strong></li>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div className="col-lg-6 aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+                        <h3 className="resume-title">Professional Experience</h3>
+                        <div className="resume-item">
+                            <h4>Web Designer &amp; Wordpress Developer</h4>
+                            <h5>2023 - Present</h5>
+                            <p><em>SILVER BUSTNESS POINT,VIP, Surat , GUJARAT </em></p>
+                            <ul>
+                                <li>I'm Work Here...</li>
+                            </ul>
+                        </div>
+                        <div className="resume-item">
+                            <h4>Web Designer &amp; Developer</h4>
+                            <h5>May - Dec 2022</h5>
+                            <p><em>SILVER BUSTNESS POINT, Surat , GUJARAT</em></p>
+                            <ul>
+                                <li>I joined the training class at this company in May and I am developing new
+                                    designs and unique plans.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div className="btn_cv">
+                    <a download="Shubham_Kakadiya" target="_blank"
+                       className="cv_btn">Download Resume</a>
                 </div>
             </div>
         </section>
@@ -356,6 +445,7 @@ class App extends React.Component {
                 <Header/>
                 <About/>
                 <Skills/>
+                <Resume/>
                 <Contact/>
                 {/*<Projects/>*/}
                 {/*<Footer/>*/}

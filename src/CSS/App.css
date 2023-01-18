@@ -186,7 +186,6 @@ a:active {
 }
 
 .menu {
-    position: fixed;
     z-index: 9998;
     border: 0;
     font-size: 24px;

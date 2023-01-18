@@ -4,7 +4,7 @@ section {
 }
 
 #about {
-    background-image: url('../img/test-bg.png');
+    background: url(../img/test-bg.png);
     background-position: center;
     background-size: auto;
 }
