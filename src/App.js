@@ -344,7 +344,7 @@ const Contact = props => {
                 <div className="section-title">
                     <h2>Contact Us</h2>
                 </div>
-                <div className="row aos-init aos-animate data reveal zoomIn" data-aos="fade-in">
+                <div className="row aos-init data reveal fadeIn" data-aos="fade-in">
                     <div className="col-lg-5 d-flex align-items-stretch">
                         <div className="info">
                             <div className="address">
