@@ -329,7 +329,7 @@ const Resume = props => {
                     </div>
                 </div>
                 <div className="btn_cv">
-                    <a download="Shubham_Kakadiya" target="_blank"
+                    <a href="./img/Kakadiya Shubham.pdf" download="Shubham_Kakadiya" target="_blank"
                        className="cv_btn">Download Resume</a>
                 </div>
             </div>
@@ -467,8 +467,6 @@ class App extends React.Component {
                 <Skills/>
                 <Resume/>
                 <Contact/>
-                {/*<Projects/>*/}
-                {/*<Footer/>*/}
             </React.Fragment>
         );
     }
