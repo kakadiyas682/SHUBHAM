@@ -17,7 +17,7 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import img from "./img/IMG_0082.jpg"
 import "./CSS/Resume.css"
 import 'animate.css';
-
+import pdf from "./img/KakadiyaShubham.pdf"
 
 const Menu = props => {
     return (
@@ -329,7 +329,7 @@ const Resume = props => {
                     </div>
                 </div>
                 <div className="btn_cv">
-                    <a href="./img/Kakadiya Shubham.pdf" download="Shubham_Kakadiya" target="_blank"
+                    <a href={pdf} download="Shubham_Kakadiya" target="_blank"
                        className="cv_btn">Download Resume</a>
                 </div>
             </div>
